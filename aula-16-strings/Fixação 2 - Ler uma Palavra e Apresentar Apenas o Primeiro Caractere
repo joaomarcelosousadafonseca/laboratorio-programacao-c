@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    char palavra[100];
+
+    printf("Digite uma palavra: ");
+    scanf("%s", palavra);
+
+    printf("O primeiro caractere eh: %c\n", palavra[0]);
+
+    return 0;
+}
+
+Lê a palavra e acessa diretamente a primeira posição do vetor (palavra[0]) para imprimir apenas a primeira letra.
