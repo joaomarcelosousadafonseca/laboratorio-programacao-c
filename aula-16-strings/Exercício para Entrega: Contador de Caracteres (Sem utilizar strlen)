@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    char palavra[100];
+    int i;
+    int tamanho = 0;
+
+    printf("Digite uma palavra: ");
+    scanf("%s", palavra);
+
+    for (i = 0; palavra[i] != '\0'; i++) {
+        tamanho++;
+    }
+
+    printf("A palavra digitada possui %d letras.\n", tamanho);
+
+    return 0;
+}
+
+Explicação: O programa lê uma palavra e utiliza um laço for que percorre a palavra caractere por caractere até encontrar o '\0', contando quantas letras foram digitadas sem usar a função strlen.
