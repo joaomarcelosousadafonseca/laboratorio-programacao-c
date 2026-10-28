@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    char palavra[100];
+    int i;
+
+    printf("Digite uma palavra: ");
+    scanf("%s", palavra);
+
+    printf("\nCaracteres da palavra:\n");
+    for (i = 0; palavra[i] != '\0'; i++) {
+        printf("%c\n", palavra[i]);
+    }
+
+    return 0;
+}
+
+Percorre a string com um laço for até encontrar o '\0', imprimindo cada letra isoladamente com uma quebra de linha (\n).
