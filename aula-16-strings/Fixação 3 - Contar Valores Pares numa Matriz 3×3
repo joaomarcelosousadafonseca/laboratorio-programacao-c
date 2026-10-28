@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int mat[3][3];
+    int i, j;
+    int pares = 0;
+
+    printf("Digite os valores da matriz 3x3:\n");
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("Posicao [%d][%d]: ", i, j);
+            scanf("%d", &mat[i][j]);
+
+            if (mat[i][j] % 2 == 0) {
+                pares++;
+            }
+        }
+    }
+
+    printf("\nQuantidade de numeros pares: %d\n", pares);
+
+    return 0;
+}
+
+Este programa lê uma matriz 3x3 e usa o operador resto da divisão (% 2 == 0) para checar se o número digitado é par, incrementando um contador sempre que encontra um número par.
