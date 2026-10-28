@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    char palavra[100];
+    int i;
+    int vogais = 0;
+
+    printf("Digite uma palavra (em minusculas): ");
+    scanf("%s", palavra);
+
+    for (i = 0; palavra[i] != '\0'; i++) {
+        if (palavra[i] == 'a' || palavra[i] == 'e' || palavra[i] == 'i' || palavra[i] == 'o' || palavra[i] == 'u') {
+            vogais++;
+        }
+    }
+
+    printf("A palavra possui %d vogais minusculas.\n", vogais);
+
+    return 0;
+}
+
+Lê a palavra e testa caractere por caractere num laço for. Se a letra for 'a', 'e', 'i', 'o' ou 'u', incrementa a variável vogais.
