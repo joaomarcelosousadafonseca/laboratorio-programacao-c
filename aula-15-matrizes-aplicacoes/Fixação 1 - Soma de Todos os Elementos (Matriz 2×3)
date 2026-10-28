@@ -18,3 +18,6 @@ int main() {
 
     return 0;
 }
+
+
+Explicação: O código lê os números digitados pelo usuário para preencher uma matriz de tamanho 2x3. Conforme cada número é inserido, ele vai acumulando o valor numa variável soma e, no final, exibe o resultado total da soma de todos os elementos.
