@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int mat[2][2];
+    int i, j;
+
+    printf("Digite 4 valores para a matriz 2x2:\n");
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 2; j++) {
+            printf("Posicao [%d][%d]: ", i, j);
+            scanf("%d", &mat[i][j]);
+        }
+    }
+
+    printf("\nMatriz digitada:\n");
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 2; j++) {
+            printf("%d\t", mat[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+O código pede para o usuário digitar 4 números e usa dois laços for com scanf para salvar esses dados nas posições da matriz 2x2. Em seguida, percorre a matriz novamente e mostra os valores digitados na tela.
