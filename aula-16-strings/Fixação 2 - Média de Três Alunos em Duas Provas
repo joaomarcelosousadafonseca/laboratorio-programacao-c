@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    float notas[3][2];
+    float soma, media;
+    int i, j;
+
+    for (i = 0; i < 3; i++) {
+        soma = 0;
+        printf("--- Aluno %d ---\n", i + 1);
+        
+        for (j = 0; j < 2; j++) {
+            printf("Nota %d: ", j + 1);
+            scanf("%f", &notas[i][j]);
+            soma = soma + notas[i][j];
+        }
+        
+        media = soma / 2;
+        printf("Media do aluno %d: %.2f\n\n", i + 1, media);
+    }
+
+    return 0;
+}
+
+O programa guarda 2 notas de 3 alunos numa matriz 3x2. Para cada aluno, o código lê as duas notas, calcula a média dividindo a soma por 2 e exibe o resultado antes de passar para o próximo.
