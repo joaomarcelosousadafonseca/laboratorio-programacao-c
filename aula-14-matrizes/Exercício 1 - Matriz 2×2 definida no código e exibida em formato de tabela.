@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    // Matriz 2x2 inicializada com valores fixos
+    int mat[2][2] = {
+        {5, 8},
+        {3, 9}
+    };
+    int i, j;
+
+    printf("Matriz em formato de tabela:\n");
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 2; j++) {
+            printf("%d\t", mat[i][j]);
+        }
+        printf("\n"); // Quebra de linha ao final de cada fileira
+    }
+
+    return 0;
+}
+
+O programa cria uma matriz 2x2 com valores pré-definidos no código. Depois, usa dois laços for para percorrer os elementos e usa o caractere \t (tabulação) para imprimir os números organizados em formato de tabela (linhas e colunas).
