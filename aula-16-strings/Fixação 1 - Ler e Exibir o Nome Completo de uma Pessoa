@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    char nome[100];
+
+    printf("Digite seu nome completo: ");
+    fgets(nome, sizeof(nome), stdin);
+
+    printf("Nome digitado: %s", nome);
+
+    return 0;
+}
+
+Utiliza a função fgets para conseguir ler o nome completo incluindo os espaços entre os nomes e depois mostra na tela.
