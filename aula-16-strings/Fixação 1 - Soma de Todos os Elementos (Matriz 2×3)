@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int mat[2][3];
+    int i, j;
+    int soma = 0;
+
+    printf("Digite os numeros da matriz 2x3:\n");
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("Posicao [%d][%d]: ", i, j);
+            scanf("%d", &mat[i][j]);
+            soma = soma + mat[i][j];
+        }
+    }
+
+    printf("\nA soma de todos os elementos é: %d\n", soma);
+
+    return 0;
+}
+
+O código lê os números digitados para preencher uma matriz 2x3. Conforme cada número é inserido, ele vai somando o valor numa variável soma e, no final, exibe o resultado total.
