@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    int mat[3][3];
+    int i, j;
+    int maior;
+
+    printf("Digite os valores da matriz 3x3:\n");
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("Posicao [%d][%d]: ", i, j);
+            scanf("%d", &mat[i][j]);
+        }
+    }
+
+    // Assume que o primeiro elemento e o maior
+    maior = mat[0][0];
+
+    // Procura se existe algum maior
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            if (mat[i][j] > maior) {
+                maior = mat[i][j];
+            }
+        }
+    }
+
+    printf("\nO maior valor encontrado foi: %d\n", maior);
+
+    return 0;
+}
+
+O código lê uma matriz 3x3 inteira e depois assume que o primeiro elemento mat[0][0] é o maior valor. Em seguida, ele percorre toda a matriz comparando elemento por elemento e, caso encontre um número maior, atualiza a variável maior para exibir o resultado final.
