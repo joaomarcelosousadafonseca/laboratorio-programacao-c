@@ -15,24 +15,19 @@ int main() {
     printf("Digite seu perfil: ");
     scanf("%s", perfil_input);
 
-    // 3. Tamanho do nome com strlen()
     tamanho_nome = strlen(nome);
 
-    // 4. Identificacao do perfil com strcmp()
     if (strcmp(perfil_input, "ADMIN") == 0) {
         strcpy(perfil_extenso, "Administrador");
     } else {
         strcpy(perfil_extenso, "Comum");
     }
 
-    // 5. Copia o nome para a variavel de confirmacao com strcpy()
     strcpy(nome_confirmacao, nome);
 
-    // 6. Monta a mensagem de boas-vindas com strcat()
     strcat(mensagem, nome_confirmacao);
     strcat(mensagem, "!");
 
-    // 7. Exibicao dos dados e resultado final
     printf("\n===== DADOS CADASTRADOS =====\n");
     printf("Nome: %s\n", nome_confirmacao);
     printf("Quantidade de caracteres: %d\n", tamanho_nome);
