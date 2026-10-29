@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char estudante[50];
+    char codigo_curso[10];
+    char nome_curso[50];
+    char estudante_copia[50];
+    char mensagem[100] = "Ola, ";
+    int tamanho_estudante;
+
+    printf("===== IDENTIFICACAO ACADEMICA =====\n\n");
+    printf("Nome do estudante: ");
+    scanf("%s", estudante);
+    printf("Codigo do curso: ");
+    scanf("%s", codigo_curso);
+
+    if (strcmp(codigo_curso, "CC") == 0) {
+        strcpy(nome_curso, "Ciencia da Computacao");
+    } else if (strcmp(codigo_curso, "SI") == 0) {
+        strcpy(nome_curso, "Sistemas de Informacao");
+    } else {
+        strcpy(nome_curso, "Curso Nao Encontrado");
+    }
+
+    tamanho_estudante = strlen(estudante);
+
+    strcpy(estudante_copia, estudante);
+
+    strcat(mensagem, estudante_copia);
+    strcat(mensagem, "!");
+
+    printf("\n----- RESULTADO -----\n");
+    printf("Estudante: %s\n", estudante_copia);
+    printf("Curso: %s\n", nome_curso);
+    printf("Caracteres no nome: %d\n\n", tamanho_estudante);
+    printf("%s\n", mensagem);
+
+    return 0;
+}
+
+O programa solicita o nome do aluno e o código do curso (CC ou SI). Usa strcmp() para associar o código ao nome completo do curso, strlen() para contar as letras do nome, strcpy() para salvar uma cópia do nome e strcat() para construir a mensagem "Ola, " + Nome + "!".
