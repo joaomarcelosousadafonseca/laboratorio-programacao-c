@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char produto[50];
+    char categoria_input[20];
+    char categoria_extenso[30];
+    char produto_copia[50];
+    char descricao[100] = "Produto: ";
+    int tamanho_produto;
+
+    printf("===== CADASTRO DE PRODUTOS =====\n\n");
+    printf("Nome do produto: ");
+    scanf("%s", produto);
+    printf("Categoria: ");
+    scanf("%s", categoria_input);
+
+    tamanho_produto = strlen(produto);
+
+    if (strcmp(categoria_input, "HARDWARE") == 0) {
+        strcpy(categoria_extenso, "Hardware");
+    } else if (strcmp(categoria_input, "PERIFERICO") == 0) {
+        strcpy(categoria_extenso, "Periferico");
+    } else {
+        strcpy(categoria_extenso, "Outros");
+    }
+
+    strcpy(produto_copia, produto);
+
+    strcat(descricao, produto_copia);
+
+    printf("\n===== RESUMO =====\n");
+    printf("Produto: %s\n", produto_copia);
+    printf("Caracteres: %d\n", tamanho_produto);
+    printf("Categoria: %s\n\n", categoria_extenso);
+    printf("Descricao: %s\n", descricao);
+    printf("Cadastro concluido!\n");
+
+    return 0;
+}
+
+O programa lê o nome de um produto e a categoria (HARDWARE ou PERIFERICO). Ele usa strlen() para obter o total de caracteres, strcmp() para conferir a categoria digitada, strcpy() para guardar o nome em uma variável auxiliar e strcat() para juntar a palavra "Produto: " com o nome copiado, gerando a descrição do estoque.
