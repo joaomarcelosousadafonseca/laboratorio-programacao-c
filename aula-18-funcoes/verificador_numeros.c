@@ -1,0 +1,30 @@
+
+#include <stdio.h>
+
+int verificarPar(int numero) {
+    if (numero % 2 == 0) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+int main() {
+    int numero;
+
+    printf("===== VERIFICADOR DE NUMEROS =====\n");
+
+    printf("\nDigite um numero: ");
+    scanf("%d", &numero);
+
+    if (verificarPar(numero) == 1) {
+        printf("\nO numero %d e par.\n", numero);
+    } else {
+        printf("\nO numero %d e impar.\n", numero);
+    }
+
+    return 0;
+}
+
+
+O programa solicita um número inteiro e utiliza a função verificarPar() para identificar se ele é par ou ímpar. Se o resto da divisão por 2 for zero, retorna 1 (par); caso contrário, retorna 0 (ímpar). Depois, apresenta o resultado na tela.
