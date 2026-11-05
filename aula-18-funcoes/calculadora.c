@@ -100,3 +100,4 @@ int main() {
     return 0;
 }
 
+O programa realiza operações de soma, subtração, multiplicação e divisão. Utiliza funções para cada operação, um menu com switch para escolher a opção e um laço do while para repetir os cálculos até o usuário escolher sair. Também verifica se a divisão é por zero.
